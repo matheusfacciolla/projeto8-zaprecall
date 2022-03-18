@@ -3,7 +3,7 @@ import SecondScreen from './secondScreen';
 
 export default function HomeScreen() {
 
-const [visible, setVisible] = React.useState(true)
+    const [visible, setVisible] = React.useState(true);
 
     return (
         visible === true ?

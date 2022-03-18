@@ -109,6 +109,88 @@ body {
     width: 13px;
     height: 15px;
     margin-right: 10px;
+    cursor: pointer;
+}
+
+.questionText {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 182px;
+    height: 100px;
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #333333;
+}
+
+.questionText p {
+    margin-left: 10px;
+}
+
+.questionText img {
+    width: 20px;
+    height: 13px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.questionAnswer {
+    width: 182px;
+    height: 100px;
+    background: #FFFFD5;
+    box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 12px;
+}
+
+.questionAnswer .btns {
+    margin-top: 12px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.questionAnswer button {
+    margin-left: 5px;
+    width: 42px;
+    height: 24px;
+    text-align: center;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 7px;
+    line-height: 8px;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.questionAnswer .red {
+    background: #FF3030;
+}
+
+.questionAnswer .orange {
+    background: #FF922E;
+}
+
+.questionAnswer .green {
+    background: #2FBE34;
+
 }
 
 .secondScreen footer {
