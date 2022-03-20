@@ -1,5 +1,6 @@
-import React from 'react';
-import SecondScreen from './secondScreen';
+import React from "react";
+import FlashCardScreen from "./FlashCardScreen";
+import logo from "../assets/logo.png";
 
 export default function HomeScreen() {
 
@@ -8,11 +9,11 @@ export default function HomeScreen() {
     return (
         visible === true ?
             <div className="home">
-                <img src="images/logo.png" alt="logo"></img>
+                <img src={logo} alt="logo"></img>
                 <h1>ZapRecall</h1>
                 <button onClick={() => setVisible(false)}>Iniciar Recall!</button>
             </div>
         :
-        <SecondScreen />
+        <FlashCardScreen />
     );
 }

@@ -1,5 +1,7 @@
 import ReactDOM from 'react-dom';
-import HomeScreen from './home';
+import HomeScreen from './components/HomeScreen';
+import "./css/reset.css";
+import "./css/style.css";
 
 function App() {
     return (
