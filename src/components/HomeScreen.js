@@ -2,9 +2,9 @@ import React from "react";
 import FlashCardScreen from "./FlashCardScreen";
 import logo from "../assets/logo.png";
 
-export default function HomeScreen() {
+export default function HomeScreen(props) {
 
-    const [visible, setVisible] = React.useState(true);
+    const {visible, setVisible, counterQuestion, setQuestionCounter, statusResult, setStatusResult, restartGame} = props;
 
     return (
         visible === true ?
@@ -14,6 +14,6 @@ export default function HomeScreen() {
                 <button onClick={() => setVisible(false)}>Iniciar Recall!</button>
             </div>
         :
-        <FlashCardScreen />
+        <FlashCardScreen counterQuestion={counterQuestion} setQuestionCounter={setQuestionCounter} statusResult={statusResult} setStatusResult={setStatusResult} restartGame={restartGame}/>
     );
 }

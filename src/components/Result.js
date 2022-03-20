@@ -4,11 +4,13 @@ import sad from "../assets/sad.png";
 
 export default function Result(props) {
 
-    let finish = props.status.length === props.questions;
+    const {counter, status, questions, restartGame} = props;
+
+    let finish = status.length === questions;
     let happyMessage = true;
 
-    for(let i=0; i<props.status.length; i++){
-        if(props.status[i] === "red"){
+    for(let i=0; i<status.length; i++){
+        if(status[i] === "red"){
             happyMessage = false;
         }
     }
@@ -20,8 +22,8 @@ export default function Result(props) {
             {finish && !happyMessage && <p><img className='emoji' src={sad} alt="sad"/>Putz...<br/><br/>Ainda faltam alguns... <br/>Mas não desanime!<br/><br/></p>}
 
             <p>
-            {props.counter}/8 CONCLUÍDOS <br/>
-            {props.status.map(element => {
+            {counter}/8 CONCLUÍDOS <br/>
+            {status.map(element => {
                 if (element === "green"){
                     return <ion-icon name="checkmark-circle" style={{color:"#2FBE34"}}></ion-icon>
                 } else if (element === "red"){
@@ -31,6 +33,8 @@ export default function Result(props) {
                 }
             })}
             </p>
-        </div>    
+
+            {finish && <button className="restart" onClick={restartGame}>REINICIAR RECALL</button>}
+        </div> 
     );
 }

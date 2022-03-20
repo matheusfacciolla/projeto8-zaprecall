@@ -3,7 +3,9 @@ import logo_pequeno from "../assets/logo-pequeno.png";
 import Result from "./Result";
 import Question from "./Question";
 
-export default function FlashCardScreen() {
+export default function FlashCardScreen(props) {
+
+    const {counterQuestion, setQuestionCounter, statusResult, setStatusResult, restartGame} = props;
 
     const questions = [
         { question: "O que é JSX?", answer: "Uma extensão de linguagem do JavaScript" },
@@ -15,9 +17,6 @@ export default function FlashCardScreen() {
         { question: "Usamos props para __", answer: "passar diferentes informações para componentes" },
         { question: "Usamos estado (state) para __", answer: " dizer para o React quais informações quando atualizadas devem renderizar a tela novamente" }
     ];
-    
-    const [counterQuestion, setQuestionCounter] = React.useState(0);
-    const [statusResult, setStatusResult] = React.useState([]);
 
     const increment = () => { setQuestionCounter(counterQuestion + 1) };
     const addResult = (result) => { setStatusResult([...statusResult, result]) };
@@ -32,7 +31,7 @@ export default function FlashCardScreen() {
                 {questions.sort(comparador).map((element, idx) => <Question info={element} increment={increment} addResult={addResult} index={idx+1} />)}
             </main>
             <footer>
-                <Result counter={counterQuestion} status={statusResult} questions={questions.length} />
+                <Result counter={counterQuestion} status={statusResult} questions={questions.length} restartGame={restartGame} />
             </footer>
         </div>
     );

@@ -123,7 +123,6 @@ body {
 .question.green {
     color: #2FBE34;
     text-decoration: line-through #2FBE34;
-    ;
 }
 
 .question p {
@@ -233,7 +232,7 @@ body {
     font-size: 18px;
     line-height: 22px;
     width: 100%;
-    max-height: 171px;
+    max-height: 244px;
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
     display: flex;
@@ -263,8 +262,8 @@ ion-icon .green {
     align-items: center;
     flex-direction: column;
     text-align: center;
-    margin-top: 16px;
-    margin-bottom: 16px;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .footer-result img {
@@ -274,4 +273,24 @@ ion-icon .green {
 
 .footer-result p:first-child {
     margin-top: 14px;
+}
+
+.footer-result .restart {
+    width: 167px;
+    height: 32px;
+    background: #FB6B6B;
+    border-radius: 5px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    color: #FFFFFF;
+    border: none;
+    cursor: pointer;
+    margin-top: 22px;
+    margin-bottom: 22px;
 }

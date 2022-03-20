@@ -3,13 +3,15 @@ import setinha from "../assets/setinha.png";
 
 export default function Question(props) {
 
+    const {info, increment, addResult, index} = props;
+
     const [questionScreen, setQuestionScreen] = React.useState("questionScreen1");
     const [questionColor, setQuestionColor] = React.useState("");
 
     if (questionScreen === "questionScreen1") {
         return (
             <div className={`question ${questionColor}`}>
-                <p>Pergunta {props.index}</p>
+                <p>Pergunta {index}</p>
                 {questionColor === "" && <ion-icon name="play-outline" onClick={() => setQuestionScreen("questionScreen2")}></ion-icon>}
                 {questionColor === "green" && <ion-icon name="checkmark-circle"></ion-icon>}
                 {questionColor === "red" && <ion-icon name="close-circle"></ion-icon>}
@@ -20,7 +22,7 @@ export default function Question(props) {
     } else if (questionScreen === "questionScreen2") {
         return (
             <div className="questionText">
-                <p>Pergunta {props.info.question}</p>
+                <p>Pergunta {info.question}</p>
                 <img className="arrow" src={setinha} alt="setinha" onClick={() => setQuestionScreen("questionScreen3")}></img>
             </div>
         );
@@ -28,29 +30,29 @@ export default function Question(props) {
     } else if (questionScreen === "questionScreen3") {
         return (
             <div className="questionAnswer">
-                <p>{props.info.answer}</p>
+                <p>{info.answer}</p>
                 <div className="btns">
                     <button className="red" onClick={() => {
                         setQuestionScreen("questionScreen1");
                         setQuestionColor("red");
-                        props.increment();
-                        props.addResult("red");
+                        increment();
+                        addResult("red");
                     }
                     }>Não lembrei</button>
 
                     <button className="orange" onClick={() => {
                         setQuestionScreen("questionScreen1");
                         setQuestionColor("orange");
-                        props.increment();
-                        props.addResult("orange");
+                        increment();
+                        addResult("orange");
                     }
                     }>Quase não lembrei</button>
 
                     <button className="green" onClick={() => {
                         setQuestionScreen("questionScreen1");
                         setQuestionColor("green");
-                        props.increment();
-                        props.addResult("green");
+                        increment();
+                        addResult("green");
                     }
                     }>Zap!</button>
                     
