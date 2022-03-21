@@ -3,7 +3,7 @@ import setinha from "../assets/setinha.png";
 
 export default function Question(props) {
 
-    const {info, increment, addResult, index} = props;
+    const { info, increment, addResult, index } = props;
 
     const [questionScreen, setQuestionScreen] = React.useState("questionScreen1");
     const [questionColor, setQuestionColor] = React.useState("");
@@ -55,7 +55,7 @@ export default function Question(props) {
                         addResult("green");
                     }
                     }>Zap!</button>
-                    
+
                 </div>
             </div>
         );

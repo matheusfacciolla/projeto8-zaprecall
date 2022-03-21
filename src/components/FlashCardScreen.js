@@ -5,7 +5,7 @@ import Question from "./Question";
 
 export default function FlashCardScreen(props) {
 
-    const {counterQuestion, setQuestionCounter, statusResult, setStatusResult, restartGame} = props;
+    const { counterQuestion, setQuestionCounter, statusResult, setStatusResult, restartGame } = props;
 
     const questions = [
         { question: "O que é JSX?", answer: "Uma extensão de linguagem do JavaScript" },
@@ -28,7 +28,7 @@ export default function FlashCardScreen(props) {
                 <h1>ZapRecall</h1>
             </header>
             <main className="questions">
-                {questions.sort(comparador).map((element, idx) => <Question info={element} increment={increment} addResult={addResult} index={idx+1} />)}
+                {questions.sort(comparador).map((element, idx) => <Question info={element} increment={increment} addResult={addResult} index={idx + 1} />)}
             </main>
             <footer>
                 <Result counter={counterQuestion} status={statusResult} questions={questions.length} restartGame={restartGame} />
@@ -37,6 +37,6 @@ export default function FlashCardScreen(props) {
     );
 }
 
-function comparador() { 
-    return Math.random() - 0.5; 
+function comparador() {
+    return Math.random() - 0.5;
 }

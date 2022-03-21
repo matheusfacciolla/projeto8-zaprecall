@@ -10,7 +10,7 @@ function App() {
     const [counterQuestion, setQuestionCounter] = React.useState(0);
     const [statusResult, setStatusResult] = React.useState([]);
 
-    function restartGame () {
+    function restartGame() {
         setVisible(true);
         setQuestionCounter(0);
         setStatusResult([]);
@@ -18,7 +18,7 @@ function App() {
 
     return (
         <>
-            <HomeScreen visible={visible} setVisible={setVisible} counterQuestion={counterQuestion} setQuestionCounter={setQuestionCounter} statusResult={statusResult} setStatusResult={setStatusResult} restartGame={restartGame}/>
+            <HomeScreen visible={visible} setVisible={setVisible} counterQuestion={counterQuestion} setQuestionCounter={setQuestionCounter} statusResult={statusResult} setStatusResult={setStatusResult} restartGame={restartGame} />
         </>
     );
 }

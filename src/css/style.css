@@ -3,7 +3,8 @@
 }
 
 body {
-    font-family: 'Righteous', 'Recursive';
+    font-family: 'Recursive', sans-serif;
+    font-family: 'Righteous', cursive;
 }
 
 .home {
@@ -22,6 +23,7 @@ body {
 .home img {
     width: 136px;
     height: 161px;
+    margin-bottom: 13px;
 }
 
 .home h1 {
@@ -44,7 +46,8 @@ body {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
     border: none;
-    margin-top: 73px;
+    margin-top: 30px;
+    font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
     font-size: 18px;
@@ -77,12 +80,16 @@ body {
 }
 
 .flashCardScreen h1 {
+    width: 203.17px;
+    height: 44px;
+    font-family: 'Righteous';
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
     line-height: 45px;
     display: flex;
     align-items: center;
+    justify-content: center;
     text-align: center;
     letter-spacing: -0.012em;
     color: #FFFFFF;
@@ -107,7 +114,12 @@ body {
 }
 
 .question p {
-    margin-left: 10px;
+    margin-left: 15px;
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
 }
 
 .question.red {
@@ -125,12 +137,8 @@ body {
     text-decoration: line-through #2FBE34;
 }
 
-.question p {
-    margin-left: 10px;
-}
-
 .question ion-icon {
-    width: 23px;
+    width: 20px;
     height: 23px;
     margin-right: 10px;
     cursor: pointer;
@@ -145,21 +153,18 @@ body {
     background: #FFFFD5;
     box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
     border-radius: 5px;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 22px;
-    color: #333333;
 }
 
 .questionText p {
     display: flex;
+    font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
     margin-left: 10px;
     margin-top: 20px;
+    color: #333333;
 }
 
 .questionText .arrow {
@@ -182,9 +187,13 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.questionAnswer p {
+    font-family: 'Recursive';
     font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 16px;
     line-height: 22px;
 }
 
@@ -232,7 +241,7 @@ body {
     font-size: 18px;
     line-height: 22px;
     width: 100%;
-    max-height: 244px;
+    max-height: 400px;
     background: #FFFFFF;
     box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
     display: flex;
@@ -242,18 +251,6 @@ body {
     position: fixed;
     bottom: 0;
     left: 0;
-}
-
-ion-icon .red {
-    color: #FF3030;
-}
-
-ion-icon .orange {
-    color: #FF922E;
-}
-
-ion-icon .green {
-    color: #2FBE34;
 }
 
 .footer-result {
@@ -266,13 +263,27 @@ ion-icon .green {
     margin-bottom: 25px;
 }
 
-.footer-result img {
+.footer-result .emoji {
     width: 18px;
     height: 18px;
+    margin-right: 10px;
 }
 
 .footer-result p:first-child {
     margin-top: 14px;
+}
+
+.footer-result .emojiText {
+    font-family: 'Recursive';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+}
+
+.footer-result .emojiText {
+    margin-bottom: 6px;
 }
 
 .footer-result .restart {
@@ -293,4 +304,134 @@ ion-icon .green {
     cursor: pointer;
     margin-top: 22px;
     margin-bottom: 22px;
+}
+
+ion-icon .red {
+    color: #FF3030;
+}
+
+ion-icon .orange {
+    color: #FF922E;
+}
+
+ion-icon .green {
+    color: #2FBE34;
+}
+
+@media (min-width: 1100px) {
+
+    .flashCardScreen header {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .flashCardScreen img {
+        width: 87px;
+        height: 100px;
+    }
+
+    .flashCardScreen h1 {
+        width: 340px;
+        height: 48px;
+        font-weight: 400;
+        font-size: 64px;
+        line-height: 79px;
+        letter-spacing: -0.012em;
+    }
+
+    .question {
+        margin-top: 17px;
+        width: 567.12px;
+        height: 91.74px;
+    }
+
+    .question p {
+        width: 153.46px;
+        height: 33.36px;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .question ion-icon {
+        width: 31.69px;
+        height: 36.7px;
+        margin-right: 21px;
+    }
+
+    .questionText {
+        width: 567.12px;
+        height: 240px;
+    }
+
+    .questionText p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+
+    .questionText .arrow {
+        margin-top: 200px;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+
+    .questionAnswer {
+        margin-top: 25px;
+        width: 567.12px;
+        height: 240px;
+        background: #FFFFD5;
+        box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.15);
+        border-radius: 5px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .questionAnswer p {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    .questionAnswer .btns {
+        margin-top: 75px;
+    }
+
+    .questionAnswer button {
+        width: 100px;
+        height: 50px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 16px;
+    }
+
+    .footer-result .emoji {
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+    }
+
+    .footer-result .emojiText {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 32px;
+        line-height: 38px;
+    }
+
+    .footer-result .restart {
+        width: 246px;
+        height: 54px;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+    }
 }
